@@ -31,17 +31,18 @@ namespace OMSIDownloadpackInstaller
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBoxDownloadpack = new System.Windows.Forms.CheckedListBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.directoryTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.listBoxDownloadpack = new System.Windows.Forms.CheckedListBox();
-            this.listBoxMaps = new System.Windows.Forms.CheckedListBox();
             this.buttonLoad = new System.Windows.Forms.Button();
-            this.buttonInstall = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.listBoxMaps = new System.Windows.Forms.CheckedListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonInstallEN = new System.Windows.Forms.Button();
+            this.buttonInstallDE = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -67,6 +68,23 @@ namespace OMSIDownloadpackInstaller
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // listBoxDownloadpack
+            // 
+            this.listBoxDownloadpack.FormattingEnabled = true;
+            this.listBoxDownloadpack.Location = new System.Drawing.Point(9, 61);
+            this.listBoxDownloadpack.Name = "listBoxDownloadpack";
+            this.listBoxDownloadpack.Size = new System.Drawing.Size(338, 529);
+            this.listBoxDownloadpack.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(45, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Downloadpacks";
             // 
             // label2
             // 
@@ -108,14 +126,15 @@ namespace OMSIDownloadpackInstaller
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // label3
+            // buttonLoad
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Downloadpacks";
+            this.buttonLoad.Location = new System.Drawing.Point(518, 101);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(75, 23);
+            this.buttonLoad.TabIndex = 5;
+            this.buttonLoad.Text = "Load";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // groupBox3
             // 
@@ -128,6 +147,14 @@ namespace OMSIDownloadpackInstaller
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
+            // listBoxMaps
+            // 
+            this.listBoxMaps.FormattingEnabled = true;
+            this.listBoxMaps.Location = new System.Drawing.Point(9, 57);
+            this.listBoxMaps.Name = "listBoxMaps";
+            this.listBoxMaps.Size = new System.Drawing.Size(338, 529);
+            this.listBoxMaps.TabIndex = 2;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -137,48 +164,33 @@ namespace OMSIDownloadpackInstaller
             this.label4.TabIndex = 0;
             this.label4.Text = "Maps";
             // 
-            // listBoxDownloadpack
+            // buttonInstallEN
             // 
-            this.listBoxDownloadpack.FormattingEnabled = true;
-            this.listBoxDownloadpack.Location = new System.Drawing.Point(9, 61);
-            this.listBoxDownloadpack.Name = "listBoxDownloadpack";
-            this.listBoxDownloadpack.Size = new System.Drawing.Size(338, 529);
-            this.listBoxDownloadpack.TabIndex = 1;
+            this.buttonInstallEN.Location = new System.Drawing.Point(249, 753);
+            this.buttonInstallEN.Name = "buttonInstallEN";
+            this.buttonInstallEN.Size = new System.Drawing.Size(117, 63);
+            this.buttonInstallEN.TabIndex = 6;
+            this.buttonInstallEN.Text = "Install (English)";
+            this.buttonInstallEN.UseVisualStyleBackColor = true;
+            this.buttonInstallEN.Click += new System.EventHandler(this.buttonInstall_Click);
             // 
-            // listBoxMaps
+            // buttonInstallDE
             // 
-            this.listBoxMaps.FormattingEnabled = true;
-            this.listBoxMaps.Location = new System.Drawing.Point(9, 57);
-            this.listBoxMaps.Name = "listBoxMaps";
-            this.listBoxMaps.Size = new System.Drawing.Size(338, 529);
-            this.listBoxMaps.TabIndex = 2;
-            // 
-            // buttonLoad
-            // 
-            this.buttonLoad.Location = new System.Drawing.Point(518, 101);
-            this.buttonLoad.Name = "buttonLoad";
-            this.buttonLoad.Size = new System.Drawing.Size(75, 23);
-            this.buttonLoad.TabIndex = 5;
-            this.buttonLoad.Text = "Load";
-            this.buttonLoad.UseVisualStyleBackColor = true;
-            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
-            // 
-            // buttonInstall
-            // 
-            this.buttonInstall.Location = new System.Drawing.Point(334, 753);
-            this.buttonInstall.Name = "buttonInstall";
-            this.buttonInstall.Size = new System.Drawing.Size(117, 63);
-            this.buttonInstall.TabIndex = 6;
-            this.buttonInstall.Text = "Install";
-            this.buttonInstall.UseVisualStyleBackColor = true;
-            this.buttonInstall.Click += new System.EventHandler(this.buttonInstall_Click);
+            this.buttonInstallDE.Location = new System.Drawing.Point(414, 753);
+            this.buttonInstallDE.Name = "buttonInstallDE";
+            this.buttonInstallDE.Size = new System.Drawing.Size(117, 63);
+            this.buttonInstallDE.TabIndex = 7;
+            this.buttonInstallDE.Text = "Install (Deutsch)";
+            this.buttonInstallDE.UseVisualStyleBackColor = true;
+            this.buttonInstallDE.Click += new System.EventHandler(this.buttonInstallDE_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 824);
-            this.Controls.Add(this.buttonInstall);
+            this.Controls.Add(this.buttonInstallDE);
+            this.Controls.Add(this.buttonInstallEN);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -208,7 +220,8 @@ namespace OMSIDownloadpackInstaller
         private System.Windows.Forms.CheckedListBox listBoxDownloadpack;
         private System.Windows.Forms.CheckedListBox listBoxMaps;
         private System.Windows.Forms.Button buttonLoad;
-        private System.Windows.Forms.Button buttonInstall;
+        private System.Windows.Forms.Button buttonInstallEN;
+        private System.Windows.Forms.Button buttonInstallDE;
     }
 }
 
